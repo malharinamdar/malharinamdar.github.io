@@ -2,23 +2,21 @@
 layout: about
 title: about
 permalink: /
-description: Demography, Sociology, Simulation, Data Science
+description: machine learning, research, robotics and tech.
 
 profile:
   align: right
   image: me.jpg
   address: >
-    <p>Lost somewhere in Santiago, Chile</p>
+    <p>pursuit of latent potential</p>
 
 news: false # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-I'm a data scientist, demographer, and sociologist working on industry and academic projects.
+I’m Malhar , an undergrad at Pune Institute of Computer Technology studying Electronics and Telecommunications. I am passianate about ML, with a strong consideration for its research in future; alongwith its intersection with robotics. Passionate learner, I aspire to gain technical expertise in these domains. .
 
-I received my Ph.D. in sociology from the [University of Wisconsin-Madison](http://www.ssc.wisc.edu/soc/) and my Bachelor's and Master's in Sociology from the [Catholic University of Chile](http://sociologia.uc.cl/). 
+I am an avid reader, with a liking towards literary fiction. In my spare time, I enjoy listening to music, mostly marathi and hindi with a little bit of english. I like hiking, playing cricket football and tennis.
 
-My **academic work** focuses on health disparities, criminal justice system's consequences for health and social integration, and the link between health inequalities and genetics. My research relies on statistical and computational methods, emphasizing data science and agent-based modeling (ABM).
-
-Currently, I am working as a **Senior Data Scientist**. I am also an **external faculty** in the Master in [Computational Social Science UC3M](https://www.uc3m.es/master/computational-social-science) (Fall 2022-2023), and collaborate with the [Center for the Study of Justice and Society](http://justiciaysociedad.uc.cl/) of the Catholic University of Chile.
+Reach out if you’d like to chat about anything you think we’d both enjoy! Open to research internship positions.
