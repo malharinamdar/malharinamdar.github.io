@@ -6,8 +6,8 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Malhar
 middle_name:
 last_name: Inamdar
-email: sebastian.daza@gmail.com
-description: Demography, Sociology, Simulation, Data Science
+email: malhar.inamdar.097@gmail.com
+description: machine learning, robotics, research and life
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -65,17 +65,17 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # Social integration
 # -----------------------------------------------------------------------------
 
-github_username: sdaza
-gitlab_username: sebastian.daza
-twitter_username: sebadaza
+github_username: malharinamdar
+gitlab_username: 
+twitter_username: 
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: sdaza
+linkedin_username: malhar1602
 telegram_username: # your Telegram user name
-scholar_userid: VaCkLrYAAAAJ # your Google Scholar ID
+scholar_userid:  # your Google Scholar ID
 semanticscholar_id: # your Semantic Scholar ID
 whatsapp_number: # your WhatsApp number (full phone number in international format. Omit any zeroes, brackets, or dashes when adding the phone number in international format.)
 orcid_id: # your ORCID ID
-medium_username: # your Medium username
+medium_username: @malharinamdar # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
 research_gate_profile: # your profile on ResearchGate
