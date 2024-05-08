@@ -2,12 +2,12 @@
 
 I wish to use this website to write and publish anything that I find useful enough to share
 including my thoughts on technology, ml, life in general and the lessons I keep learning
-along the way.
+along the way.🎯
 
 
 
 
-work is still under progress, will keep updating on the progress of the website.
+work is still under progress🛠️, will keep updating on the progress of the website.
 
 
 
