@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Harvestify
-description: ml based agricultural crop recommendation system
+description: ML based agricultural crop recommendation system
 img: /assets/img/population.jpeg
 importance: 3
 category: previous
