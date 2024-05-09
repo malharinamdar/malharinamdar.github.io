@@ -114,7 +114,7 @@ bing_site_verification:  # out your bing-site-verification ID (Bing Webmaster)
 
 blog_name: blog # blog_name will be displayed in your blog page
 blog_nav_title: blog # your blog must have a title for it to be displayed in the nav bar
-blog_description: thoughts and articles on ml, technology and my random hobbies. I will also try to include various other lessons I learn along the way.
+blog_description: ml, tech and learnings along the way.
 permalink: /blog/:year/:title/
 
 # Pagination
