@@ -8,3 +8,4 @@ tag:
 giscus_comments: true
 ---
 used an excuse just to post my first blog on the website lol.
+will later delete it
