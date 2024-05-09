@@ -2,7 +2,7 @@
 layout: post
 author: Malhar Inamdar
 title: "endsem week"
-date: 2012-08-25
+date: 2024-05-10
 tag: 
   - thoughts
 giscus_comments: true
