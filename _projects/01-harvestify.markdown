@@ -2,7 +2,7 @@
 layout: page
 title: Harvestify
 description: ML based agricultural crop recommendation system
-img: /assets/img/population.jpeg
+img: /assets/img/women_reentry.jpeg
 importance: 3
 category: previous
 ---
