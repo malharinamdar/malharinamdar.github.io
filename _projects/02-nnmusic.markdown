@@ -2,7 +2,7 @@
 layout: page
 title: untitled project
 description: music generation system using cnn and deep learning
-img: /assets/img/women_reentry.jpeg
+img: 
 # years: [2020, 2019, 2018]
 importance: 2
 category: current
