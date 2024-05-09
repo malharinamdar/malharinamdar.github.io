@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Women reentry
-description: Social integration and inclusion after being in prison
+title: project 1
+description: integration
 img: /assets/img/women_reentry.jpeg
 # years: [2020, 2019, 2018]
 importance: 2
