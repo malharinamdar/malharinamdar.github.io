@@ -9,6 +9,11 @@ along the way.🎯
 
 work is still under progress🛠️, will keep updating on the progress of the website.
 
+Guide:
+- https://github.com/alshedivat/al-folio
+- https://github.com/alshedivat/al-folio/blob/master/INSTALL.md installation
+- https://github.com/alshedivat/al-folio/blob/master/CUSTOMIZE.md modification
+
 
 
 
