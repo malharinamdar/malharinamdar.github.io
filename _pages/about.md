@@ -6,7 +6,7 @@ description: machine learning, research, robotics and tech.
 
 profile:
   align: right
-  image: me1.jpg
+  image: finalme.jpg
   image_circular: true
   address: >
     <p>pursuit of latent potential</p>
