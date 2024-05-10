@@ -1,6 +1,6 @@
 ---
 layout: page
-title: untitled project
+title: HarmonAI
 description: music generation system using cnn and deep learning
 img: 
 # years: [2020, 2019, 2018]
