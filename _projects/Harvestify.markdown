@@ -2,8 +2,7 @@
 layout: page
 title: Harvestify
 description: ML based crop recommendation system
-img: /assets/img/woman_reentry.jpeg
-# years: [2020, 2019, 2018]
+img: /assets/img/women_reentry.jpg
 importance: 2
 category: previous
 ---
