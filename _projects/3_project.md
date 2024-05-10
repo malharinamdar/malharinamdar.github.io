@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: Harvestify
+description: ML based crop recommendation system
 img: assets/img/7.jpg
 importance: 3
 category: previous
