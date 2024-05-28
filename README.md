@@ -1,4 +1,4 @@
-# Malhar Inamdar Website
+# Personal portfolio and blog
 
 I wish to use this website to write and publish anything that I find useful enough to share
 including my thoughts on technology, ml, life in general and the lessons I keep learning
