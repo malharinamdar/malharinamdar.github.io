@@ -7,3 +7,11 @@ img: assets/diabetes.png
 importance: 2
 category: current
 ---
+this project is used to predict the instance of diabetes in patients based on multiple parameters
+and provide a personalised dietarty and lifetstyle suggestions using GenAI.
+
+We used `Gemini-1.5-flash` model to assist positive patients.
+
+Alongwith this is a chatbot integrated for Q&A for patients wishing to seek advice.
+
+code available at <a href="https://github.com/malharinamdar/DiabetesCare-AI">repo</a>
