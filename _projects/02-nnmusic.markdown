@@ -1,8 +1,8 @@
 ---
 layout: page
 title: HarmonAI
-description: music generation system using cnn and deep learning
-img: 
+description: music recommendation system 
+img: assets/img/music.png
 # years: [2020, 2019, 2018]
 importance: 2
 category: current
@@ -13,5 +13,6 @@ yet I love listening music.
 
 Hence, combining my hobby and passion has led me to create this project.
 
+My upcoming project where I build a music recommendation system.
 
-My upcoming project where I delve deep into deep learning and build a music generation system using LSTM and CNN techniques.
+code available at <a href="https://github.com/malharinamdar/buildspace">repo</a>
