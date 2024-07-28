@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HarmonAI
+title: Sangeet
 description: music recommendation system 
 img: assets/img/music.png
 # years: [2020, 2019, 2018]
