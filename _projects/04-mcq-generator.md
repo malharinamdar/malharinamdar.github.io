@@ -17,7 +17,7 @@ Rather I chose a simpler approach of directly using Gemini LLM model to implemen
 ideas into this project, which at this stage is still a very simple webapp.
 
 
-website now live at <aa href="https://mcq-generator-web.streamlit.app/">link</a>
+website now live at <a href="https://mcq-generator-web.streamlit.app/">link</a>
 
 Code available at <a href="https://github.com/malharinamdar/mcq-generator">repo</a>
 
