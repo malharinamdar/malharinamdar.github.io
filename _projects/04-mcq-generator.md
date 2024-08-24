@@ -5,7 +5,7 @@ description: text based mcq generator using NLP
 img: assets/img/mcq.png
 # years: [2020, 2019, 2018]
 importance: 2
-category: current
+category: previous
 ---
 
 In this project my initial idea was to implement the the system of mcq generation using T5 Tranformer model 
