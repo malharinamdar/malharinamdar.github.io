@@ -6,7 +6,7 @@ description: machine learning, research, robotics and tech.
 
 profile:
   align: right
-  image: finalme.jpg
+  image: <!-- finalme.jpg -->
   image_circular: true
   address: >
     <p></p>
