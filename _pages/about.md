@@ -7,7 +7,7 @@ description: machine learning, research, robotics and tech.
 profile:
   align: right
   image: assets/img/finalme.jpg
-  image_circular: true
+  image_circular: false
   address: >
     <p></p>
 
