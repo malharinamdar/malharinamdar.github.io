@@ -19,6 +19,6 @@ I’m Malhar, an undergrad studying electronics. I am fascinated by machine lear
 
 I wish to contribute to the field of machine learning by research sometime, but in the meantime, there's a lot to learn. 
 
-Currently part of robotics club in my college and learning deep learning.
+Currently a technical member at PICT Robotics and learning deep learning.
 
 Reach out if you’d like to chat about anything you think we’d both enjoy! Open to research internship positions.
