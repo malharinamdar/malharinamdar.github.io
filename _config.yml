@@ -122,18 +122,17 @@ pagination:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
 # the information below.
-#giscus:
-  #repo: malharinamdar/malharinamdar.github.io      # <your-github-user-name>/<your-github-repo-name>
-  #repo_id: MDEwOlJlcG9zaXRvcnk1MzY3MjE3MQ==
-  #category: Comments             # name of the category under which discussions will be created
-  #category_id: DIC_kwDOA5PmLc4CTBt6
-  #mapping: title                 # identify discussions by post title
-  #strict: 1                      # use strict identification mode
-  #reactions_enabled: 1           # enable (1) or disable (0) emoji reactions
-  #input_position: bottom         # whether to display input form below (bottom) or above (top) the comments
-  #theme: preferred_color_scheme  # name of the color scheme (preferred works well with al-folio light/dark mode)
-  #emit_metadata: 0
-  #lang: en
+giscus:
+  repo: "malharinamdar/malharinamdar.github.io"    # GitHub repository where Giscus is enabled
+  repo_id: "R_kgDONP54sg"                          # Your Giscus repository ID
+  category: "comments"                             # Category name in discussions
+  category_id: "DIC_kwDONP54ss4CkTkr"              # Category ID for the discussion category
+  mapping: "pathname"                              # Mapping method (pathname is generally ideal for unique URLs)
+  theme: "preferred_color_scheme"                  # Theme (can be "light", "dark", or "preferred_color_scheme" for auto)
+  reactions_enabled: "1"                           # Show reactions on comments (1 to enable, 0 to disable)
+  emit_metadata: "0"                               # Set to "0" if you don’t want to include metadata
+  lang: "en"                                       # Language code (set to your preferred language)
+
 
 # Disqus comments (DEPRECATED)
 # disqus_shortname: al-folio # put your disqus shortname
