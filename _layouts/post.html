@@ -43,11 +43,25 @@ layout: default
     {{ content }}
   </article>
 
-  {%- if site.disqus_shortname and page.disqus_comments -%}
-    {% include disqus.html %}
+  {%- if page.giscus_comments -%}
+  <!-- Giscus Comments Section -->
+  <section id="comments">
+      <script src="https://giscus.app/client.js"
+              data-repo="malharinamdar/malharinamdar.github.io"
+              data-repo-id="R_kgDONP54sg"
+              data-category="comments"
+              data-category-id="DIC_kwDONP54ss4CkTkr"
+              data-mapping="pathname"
+              data-strict="0"
+              data-reactions-enabled="1"
+              data-emit-metadata="0"
+              data-input-position="bottom"
+              data-theme="preferred_color_scheme"
+              data-lang="en"
+              crossorigin="anonymous"
+              async>
+      </script>
+  </section>
   {%- endif %}
-  {%- if site.giscus.repo and page.giscus_comments -%}
-    {% include giscus.html %}
-  {%- endif -%}
 
 </div>
