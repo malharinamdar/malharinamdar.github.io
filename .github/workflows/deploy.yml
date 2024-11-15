@@ -43,10 +43,7 @@ jobs:
         fi
         echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
 
-    - name: Deploy website
-      env:
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}  # Use the PAT here
-      run: |
-        yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }} \
-          --src ${{ steps.setup.outputs.SRC_BRANCH }} \
-          --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }}
+    - name: Deploy website 
+      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
+                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
+                    --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }}
