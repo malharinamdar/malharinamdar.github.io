@@ -1,0 +1,115 @@
+---
+layout: post
+title: "We need more stupid models... oh, right!"
+description: ""
+category: "agent-based modeling"
+tags: [modeling, ABM, home]
+---
+
+
+A good way to learn the *nitty gritty* of agent-based modeling (ABM) is to *reproduce* re-implement a by others. As we start *replicating*, we quickly realize *things* could be done in many different ways. Theory always has to be our guideline, but theories are full of ambiguities, especially in social sciences. So, most of the time, we are going to have a lot of degrees of freedom to create our our models. How these  **modeling idiosyncrasies** affect our results and conclusions is key to assess the quality and credibility of our computational models. For good reviews about replication and understanding agent-based models see XX.
+
+In this post I implement the model proposed by Birks et al. (2012, 2014) to explain three crime regularities: spatial concentration, repeated victimization, and journey to crime curve. I didn't intend to replicate *exactly* this model; indeed, I introduce several changes. However, I think this is still a nice exercise on  learning form ABM and avoid make fool ourselves. The key message: we need to spend a reasonable time of our modeling process trying to understand what the model is telling us and checking how changes in the way we model affect our results.
+
+#  Agent-based models, and some of their uses
+
+robustness checks, to finally discuss what we learn from models like this.
+
+Otherwise, the common critics to ABM such as XXX, are reasonable and get support.
+
+First, I describe the original model, then I define my version of the model, and then I discusses the similarities and differences between both.
+
+Both papers show experiments combining these mechanisms (eight combinations in total). I show the same kind of experiments but using *my version* of the model. Then, I discuss the insights can get from ABMs, but also their limitations and misuses. Let's start.
+
+## Good quotations
+
+"The behavior of a simulation is not understandable by simple inspection, on the contrary, efforts towards the results of a simulation must be expendend, since there is no guarantee that what goes on in it is going to be obvious"
+
+(Di Paolo, Noble, and Bullock 2000)
+
+Which particular mechanisms in the simulation caused the interesting patterns and reconceptualize it to se what insight this causality may give us into the real-world system.
+
+In most cases the real value of a simulation study depends on a subjective answer to the question: was the model useful? the answer is "yes" if the model told us something new, challenged some deeply entrenched assumptions, showed surprising implications of a conceptual model, suggested a new way of approaching a research question or highlighted gaps in our knowledge.
+
+"Although information about the relationship of the set-up of a simulation and its global outcomes can be useful, this fall short of a full scientific understanding, which must explain *how* there are connected.
+
+## Model and Implementation
+
+- Transportation network: I use a different approach
+- Number of routine activities: 5
+- Radius of offender activity space: 25
+- Learning rate logistic function (4)
+- Return home probability 0.8
+- World size 100 x 100
+- Potential offenders 25
+- Number of potential targets: 2500
+- Number of transport nodes: 1000
+- Model end condition: 1000 crimes
+- Motivation offenders: 0.10
+
+## My implementation
+
+- Transportation network: grid - radial design based on XX
+- Movement: shortest path (weighted and non-weighted) 50%
+- Same number of routine activities and prob return home
+- Similar number of other parameter but not exactly the same
+
+## Comparison
+
+- Main differences of my results
+- Rational-choice processes seem more important
+- All the rest it is kind of obvious
+
+Some differences so far, possible explanations
+
+### Gini
+
+- In my non-neighbor models, crime-patterns mode doesn't generate high gini coefficients, why? Awareness is being set so that nodes don't have higher scores.
+- So my conclusion is that how agents move is essential regarding the results obtained
+
+### Skewness
+
+- It is hard to compare measures, I don't get similar results.
+- How the transportation network affects the results: the network has boundaries (it is not a torus)
+- As expected: routine activities have the most important impact. Similar substantial conclusion, different magnitud of the metric.
+
+### NNI
+
+- This index is very related to the Gini coefficient or repeated victimization (in my case even more). The magnitude of my scores is very different from what Birks gets, although, I don't get the high reduction due to crime-patterns. This is due to, again, the restrictions I have imposed to the definition of awareness.
+- The point here is that an important relationship between how agents move and repeated and spatial concentration of crime exists. In the second case, drivers are responding to each others' behavior and influencing each other's behavior.
+
+## Some notes that can be useful:
+
+- Schelling: There are easy cases, of course, in which the aggregate is merely an extrapolation from the individual. If we know that every driver, on his own, turns his lights on at sundown, we can guess that from our helicopter we shall see all the car lights in a local area going on at about the same time. But if most people turn their lights on when some fraction of the oncoming cars already have their lights on, we'll get a different picture form our helicopter.
+## Do we really need an ABM for this?
+
+2. Regularities observed across offense types, localities and contexts.
+	- Offending is not distributed uniformly in space or time
+	- A small number of people, paces and targets experience the majority of the victimization
+	- The distances offenders travel are typically short and exhibit the characteristics of a distance decay function
+
+3. ABM: the aim is to assess whether a particular hypothesized decision calculus is sufficient to provide a viable explanation for a specific known regularity of crime: not a replace of empirical research, theoretical prototyping, not a definitive causal explanation, but allows to eliminate those hypothesized mechanisms that are insufficient!
+2. They argue that ABM can be used as a means to operationalize and test hypothetical mechanisms that offer a potential explanation for observed criminological phenomena.
+3. ABM of residential burglary: potential offenders and potential targets that behaves according to what the environmental criminology proposes:
+	- Impact of this mechanisms on patterns of offending
+		+ Spatial concentration of crime (nearest neighborhood index)
+		+ Repeat victimization (Gini coefficient)
+		+ Journey to crime curve (JTC skewness): Euclidean distance between offense location and offender home, distribution of these distances  (the distances offenders travel to offend are typically short and exhibit the characteristics of a distance decay function)
+	- Mechanisms
+		+ Routine activity approach
+		+ Rational choice
+		+
+
+
+## References
+
+Birks, Daniel, Michael Townsley, and Anna Stewart. 2012. “Generative
+Explanations of Crime: Using Simulation to Test Criminological Theory.”
+*Criminology* 50 (1): 221–54. There is a new version of this paper
+
+Birks, Daniel, Michael Townsley, and Anna Stewart. 2014. “Emergent
+Regularities of Interpersonal Victimization An Agent-Based Investigation.”
+*Journal of Research in Crime and Delinquency* 51 (1): 119–40.
+
+
+**Last Update: `r format(Sys.time(), '%m/%d/%Y')`**

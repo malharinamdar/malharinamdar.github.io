@@ -1,0 +1,174 @@
+---
+layout: post
+title: "Comparing logit/probit coefficients across nested models"
+description: ""
+category: "regression"
+tags: [modeling, R, home, monte-carlo]
+---
+
+
+When we look a table with nested logistic or probit models, we have the temptation to compare coefficients directly.  We know, however, that that could be misleading: unlike OLS, changes in coefficients in logit/probit models cannot be attributed directly to the inclusion of confounders. Why? In a nutshell, the variance of the underlying latent variable is not identified and will differ between models with different covariates.
+
+In this post I show how coefficients change when including predictors in logit models using Monte Carlo simulations. I also compare different solutions available in the *market*, following the analyses discussed by Karlson, Holm, and Breen (khb).
+
+First, I define a latent logistic model to simulate data:
+
+$$
+y^* = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + u \\
+y = 1 \text{ if } y^* > percentile(y^*), 0 \text{ otherwise}
+$$
+
+$\beta_0$ is the intercept. $x_1$ and $x_2$ can be normal distributed or binary. $u$, the error term, has a standard logistic distribution. When $y^*$ is higher than a certain percentile, it becomes 1, it is 0 otherwise. At the botton of this post, I show a function to easily run different scenarios and compare solutions. We will need the R packages `khb`, `mfx`, `MASS`, `ggplot2` and `data.table`.
+
+The function allows different cut-points for the dependent variable $y^*$, different distributions for $x_1$ and $x_2$ (normal or binary) and correlation between them. The function compares five solutions: naive (just the traditional logit coefficients), $y$ standardization, the khb, average partial effects (ape), and linear probability model.
+
+I compute ratios  $\frac{\beta_1^{\text{ full}}}{\beta_1^{\text{ restricted}}}$, that is, the $x_1$ coefficient when **controlling** for $x_2$ over the $x_1$ coefficient **without controlling** for $x_2$. I worried only about estimates, not their uncertainty (standard errors).
+
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+library(sdazar)
+library(ggplot2)
+# library(texreg)
+# install.packages("/Users/sdaza/Downloads/08ZIP/khb_0.1.tar.gz",repos = NULL, type="source")
+# library(arm)
+library(khb)
+library(MASS)
+library(mfx)
+```
+
+<h2 class="section-heading">First scenario</h2>
+
+
+
+```{r, echo = FALSE, warning = FALSE, message = FALSE}
+sim <- function(b0 = 1, b1 = 0.5, b2 = 1, n = 1000, nsim = 1, cutpoint = 0.5, corx = 0.5,
+	x1 = "normal", prop1 = 0.5, x2 = "normal", prop2 = 0.5) {
+
+# function for plot
+data_summary <- function(x) {
+   m <- mean(x)
+   ymin <- m - 1 *sd(x)
+   ymax <- m + 1* sd(x)
+   return(c( y = m ,ymin = ymin,ymax = ymax))
+}
+
+# set vector for save results
+out <- NULL
+mcor <- rep(NA, nsim)
+
+for (i in 1:nsim) {
+
+# matrix to save results
+ratio <- matrix(NA, 1, 6)
+mnames <- c("latent", "naive", "y std", "khb", "marginal", "lpm")
+colnames(ratio) <- mnames
+
+# create predictors
+mu <- rep(0, 2)
+sigma <- matrix(corx, nrow = 2, ncol = 2)
+diag(sigma) <- 1
+
+dat <- data.table(MASS::mvrnorm(n = n, mu = mu, Sigma = sigma))
+setnames(dat, c("x1", "x2"))
+
+# dichotomize predictors if *binary*
+if ( x1 == "binary") {
+dat$x1 <-  qbinom(pnorm(dat$x1), 1, prop1)
+}
+
+if ( x2 == "binary" ) {
+dat$x2 <-  qbinom(pnorm(dat$x2), 1, prop2)
+}
+
+
+# latent logistic model
+dat[, y :=  b0 + b1 * x1 + b2 * x2 + rlogis(n, 0, 1)]
+dat[, yb := ifelse(y > quantile(y, cutpoint), 1, 0)] # definition of cutpoint
+
+# estimate ratios by method
+
+# latent
+m1a <- lm(y ~ x1, data = dat)
+m1b <- lm(y ~ x1 + x2, data = dat)
+ratio[1, 1] <- m1b$coeff[2]/m1a$coeff[2]
+
+# naive
+m2a <- glm( yb ~ x1, data = dat, family = "binomial")
+m2b <- glm( yb ~ x1 + x2, data = dat, family = "binomial")
+ratio[1, 2] <- m2b$coeff[2]/m2a$coeff[2]
+
+# y-standardization
+ratio[1, 3] <- khb::ystandcoef(m2b)[2]/khb::ystandcoef(m2a)[2]
+
+# khb
+ratio[1, 4] <- 1 / suppressMessages(khb::khb(m2a, m2b)$sum_conf$Ratio)
+
+# marginal
+m3a <- mfx::logitmfx( yb ~ x1, data = dat, atmean = FALSE)
+m3b <- mfx::logitmfx( yb ~ x1 + x2, data = dat, atmean = FALSE)
+ratio[1, 5] <- m3b$mfxest[1]/m3a$mfxest[1]
+
+# linear probability model
+m4a <- lm(yb ~ x1, data = dat)
+m4b <- lm(yb ~ x1 + x2, data = dat)
+ratio[1, 6] <- m4b$coeff[2]/m4a$coeff[2]
+
+# create outputs
+out <- rbind(out, ratio)
+mout <- apply(out, 2, mean)
+
+}
+
+# create plot (only if the number simulations is higher than 10)
+if ( nsim > 10 ) {
+
+# change format
+mdat <- suppressWarnings(melt(data.table(out)))
+mdat[, variable := factor(variable, levels = mnames)]
+means <- mdat[, .(mvalue = mean(value)), by = variable]
+
+# ggplot
+mplot <- ggplot(mdat, aes(variable, value)) +
+ geom_violin(trim = TRUE) +
+ stat_summary(fun.data = data_summary, color = "red", alpha = 0.5) +
+ annotate("text", x = means$variable , y = means$mvalue + .02, label = round(means$mvalue, 4), col = "blue", size = 2.7) +
+ theme_bw() +
+ labs( y = "Ratio", x = " ", title = "Ratio  Partial / Gross Effect", subtitle = paste0("N = ", n, ", Simulations = ", nsim))
+
+# return list with three objects
+return(list(out, mout, mplot))
+
+}
+
+else { return(out) }
+
+
+}
+```
+
+```{r, eval = FALSE}
+
+sim(corx = 0, cutpoint = 0.5, x1 = "normal", x2 = "normal", n = 1000, nsim = 100)
+
+sim(corx = 0, cutpoint = 0.8, x1 = "normal", x2 = "normal", n = 1000, nsim = 100)
+
+sim(corx = 0.5, cutpoint = 0.9, x1 = "normal", x2 = "normal", n = 1000, nsim = 100)
+
+sim(corx = 0.5, cutpoint = 0.9, x1 = "binary", prop1 = 0.5, x2 = "binary", prop2 = 0.5, n = 1000, nsim = 100)
+
+```
+
+
+**Last Update: `r format(Sys.time(), '%m/%d/%Y')`**
+
+-----
+
+### References
+
+Karlson, Kristian Bernt, Anders Holm, and Richard Breen. 2012. "Comparing
+Regression Coefficients Between Same-Sample Nested Models Using Logit and
+Probit A New Method". *Sociological Methodology* 42 (1):286-313.
+
+
+### Function

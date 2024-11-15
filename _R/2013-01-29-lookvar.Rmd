@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Looking for variables in R"
+description: ""
+category: R
+tags: [R, home]
+---
+
+
+Recently, I have been working with big databases. After reading their codebooks (usually very long pdf files),
+I thought it would be useful to have a function to find variable names in R. I wrote a simply function
+that looks for variable names in __data.frame__ and __data.table__ objects.
+
+Here an example:
+
+```{r, echo=FALSE}
+options(replace.assign=TRUE, tidy=TRUE, width=110, scipen = 4, digits = 3)
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(devtools); source_gist("4661324")
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(data.table)
+```
+
+```{r}
+dat  <- data.table(infert)
+(var  <- lookvar(dat, c("par", "spon")))
+
+dat[, var, with=FALSE]
+```
+
+Pretty useful, at least for me. You can also use _regular expressions_ to get variables, for instance, something like `lookvar(dat, "p5[0-2]_[a-z]+_2")`.

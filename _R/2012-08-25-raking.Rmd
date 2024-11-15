@@ -1,0 +1,235 @@
+---
+title: "Raking weights with R"
+description: ''
+layout: post
+output: html_document
+tags:
+- raking
+- home
+category: survey
+bibliography: raking.bib
+---
+
+When I was working with public opinion surveys, I usually had to adjust the data according to population parameters such as sex, age, socioeconomic status, or region. There are several ways to do this. One of them is *raking*. Using the package [anesrake](http://cran.r-project.org/web/packages/anesrake/index.html) by [Josh Pasek](http://joshpasek.com) is easy to compute raking weights in R. I show a brief and straightforward raking example in this post.
+
+***
+
+### What is raking?
+
+It is common to find differences between the population and sample distribution in some key demographic variables when analyzing surveys. These differences might be due to the sampling design, non-coverage issues or non-response. To avoid biases of point estimates, we generally adjust those differences using weights so that the marginal totals agree (at least in part) with the population. These adjustments can be done using different methods: post-stratification or cell-weighting, raking, general regression estimator GREG (Battaglia et al. 2004, Valliant et al. 2013). Here I will show an example for raking adjustment. Raking  has some advantages over cell-weighting:
+
+1. We have to know only the population totals of the specific variables, not all cells of the cross-classification.
+2. It is more flexible feasible when we use several variables at once.
+
+It is important to note that raking adjustments are useful when we want to estimate a proportion or mean from a population, but they are not necessarily the best when modeling (see Gelman 2007). In that case, model specification (i.e., inclusion of all the key variables and interactions) may be a better solution. It is important to note that the raking procedure may affect the *dependence structure* of variables, what eventually may bias model estimates.
+
+***
+
+### Some rules of thumb
+
+DeBell and Krosnick (2009) provide useful recommendations regarding variable selection when implementing *raking*:
+
+- Identify a set of variable likely to be measured with little error and a low item nonresponse rate (less than 5%), and compare them with *reliable* data sources (e.g., Census). Some typical variables are age groups, gender, race, SES, census region.
+- Implement weighting when substantive demography discrepancies are observed. For instance, differences higher than five percentage points. When differences are less than two percentage points this adjustment would not be necessary.
+- When selected variables have categories with less than 5% in the sample, it would be recommended to collapse them.
+
+Remember, however, that the ultimate goal of raking is to calibrate and improve the efficiency of our estimates (reduce standard errors). In general, there is trade-off between these two objectives. Anyway, weight adjustments should be variable-dependent: they should explore how different key variables of our survey behave after adjusting. In this post I only show how to implement *raking*. A more complete analysis will be surely necessary.
+
+Once the raking procedure is implemented, it is a good idea to follow these steps in an iterative fashion:
+
+- Identify extreme weights and truncate them. For example, those greater than five times the mean of weights.
+- Truncate large values, but not small ones (i.e., those near zero). While large values increase the effect of outliers and are more likely to inflate variance, low values do not.
+- Examine the design effect using the new weights. If the *new design effect* is greater than the *old design effect* by more than 0.5, it is a good idea to review the raking adjustment. In other words, calibration may cost too much in terms of efficiency (standard errors).
+
+Three things can be done to improve the weighting procedure:
+
+- Collapse categories of the variables
+- Eliminate or replace weighting variables
+- Increase the weight truncation criterion ( > 5 )
+
+***
+
+### Raking using R
+
+In this example I use data from Chile to estimate the **presidential approval** ([Opinion Public Survey CEP, July-August 2012](http://www.cepchile.cl/bannerscep/bdatos_encuestas_cep/base_datos.php)). Below, you can see the characteristics of the dataset:
+
+```{r, echo=FALSE}
+options(replace.assign = TRUE, width = 120, tidy =TRUE, scipen = 4, digits = 3)
+```
+
+
+```{r}
+dat  <- read.csv("cep.csv")
+str(dat)
+```
+
+I use five variables to define raking weights: `sex`, `agecat`, `ses`, `region`, and  `area`. I get relative frequencies of these variables using the package `weights` . Most of the variables have more than five percent in each category, with the exception of `region` and `ses`. For illustrative purposes, I will use those variables without collapsing their categories.
+
+```{r, message=F, warning=F}
+library(weights)
+# sex: 1 male, 2 female
+wpct(dat$sex)
+# agecat: 1 18-24, 2 25-34, 3 35-44, 4 45-54, 5 55+
+wpct(dat$agecat)
+# ses: 1 abc1, 2 c2, 3 c3, 4 d, 5 e
+wpct(dat$ses)
+# region: 1 to 15
+wpct(dat$region)
+# area: 1 urban, 2 rural
+wpct(dat$area)
+```
+
+The next step is to specify the population distribution of the selected variables in a target *list*. I use two sources to obtain population values: the Chilean Census 2002, and the *Bicentenario* Survey 2009. It is hard to find reliable SES population parameters. The *Bicentenario* data provide, at least, an approximation.
+
+```{r}
+# chilean census 2002
+sex <- c(.49,.51)
+agecat  <- c(.163, .203, .195, .187, .253)
+region <- c(0.015, 0.031, 0.016, 0.039, 0.102, 0.051, 0.059, 0.123,
+            0.056, 0.046, 0.006, 0.010, 0.408, 0.023 , 0.013)
+area  <-  c(.869, .131)
+
+# bicentenario survey 2009
+ses  <- c(.109, .184, .261, .364, .083)
+
+# definitions of target list
+targets <- list(sex, agecat,ses, region, area)
+# important: to use the same variable names of the dataset
+names(targets) <- c("sex", "agecat", "ses", "region", "area")
+# id variable
+dat$caseid <- 1:length(dat$sex)
+```
+
+The output shows that some distributions do not sum one. This is because of rounding. We can force any proportion distribution to sum one using `force1 = TRUE`. The differences between the population and the sample distribution are all greater than five percentage points. This meets the variable selection criterion discussed above.
+
+```{r, warning=FALSE, message=FALSE}
+sum(region)
+```
+
+```{r, warning=FALSE, message=FALSE}
+library(anesrake)
+anesrakefinder(targets, dat, choosemethod = "total")
+```
+
+I apply the *anesrake* function as follows:
+
+- The maximum weight value is five, weights greater than five will be truncated (`cap = 5`).
+- The total differences between population and sample have to be greater than 0.05 so that to include a variable  (`pctlim = .05`).
+- The maximum number of variables included in the raking procedure is five (`nlim = 5`).
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+outsave <- anesrake(targets, dat, caseid = dat$caseid,
+  verbose= FALSE, cap = 5, choosemethod = "total",
+  type = "pctlim", pctlim = .05 , nlim = 5,
+  iterate = TRUE , force1 = TRUE)
+```
+
+```{r, warning=FALSE, message=FALSE}
+summary(outsave)
+```
+
+The procedure reaches good convergence, weights lower than 5, and very small differences between the sample and population distribution. In addition, the design effect is 1.38. This gives us an idea of the weighting loss due to the raking procedure. The weighting loss ($L_w$) is the inflation in the variance of sample estimates that can be attributed to weighting (Heeringa et. al. 2010). A simple approximation is:
+
+$$ L_w(\bar{y}) \approx \frac{\sigma^{2}(w)}{\bar{w}^2} = \Bigg( \frac{\sum\limits_{i=1}^n w_i^2}{\big(\sum\limits_{i=1}^n w_i\big)^2} \cdot n \Bigg) - 1 $$
+
+This simple formula was introduced by Kish (1965) in the context of proportionated stratified sampling. It represents the proportional increase in the variances of means and proportions, ignoring any clustering that may be included in the sample plan. It assumes that:
+
+- Proportionate allocation is the optimal stratified design, i.e., variances of $y$ are approximately equal in all strata.
+- Weights are uncorrelated with the values of the random variable $y$.
+
+Thus, values from this formula only represents an approximation to weighting loss provided that model assumptions are met. As can be seen in the `anesrake` output, the design effect is 1.38. That value is equal to $1 + L_w$.
+
+```{r, message=FALSE}
+# add weights to the dataset
+dat$weightvec  <- unlist(outsave[1])
+n  <- length(dat$region)
+
+# weighting loss
+((sum(dat$weightvec ^ 2) / (sum(dat$weightvec)) ^ 2) * n) - 1
+```
+
+For a more precise estimation of the design effect it would be necessary to use a package such as [survey](http://cran.fhcrc.org/web/packages/survey/index.html), specifying the characteristics of the sample design. Unfortunately, I do not have enough information to specify the sample design and to estimate the design effect of the presidential approval. There are also no cluster variables or replicate weights in the CEP dataset.
+
+Anyway, the weighting loss approximation denotes an increase in the design effect lower than .5, what meets the recommendations mentioned above. However, it is important to keep in mind that this weighting procedure does not take into account any clustering effect associated with the sample design.
+
+Finally, we can estimate the presidential approval with and without weights:
+
+```{r}
+unweighted <-  wpct(dat$approval)
+weighted  <-  wpct(dat$approval, dat$weightvec)
+tab  <- data.frame(unweighted, weighted)
+rownames(tab)  <- c("approve", "disapprove", "unsure", "dk")
+tab
+```
+
+The difference between the weighted and unweighted presidential approval is not big, only `r sum(abs(unweighted-weighted))` percentage points.
+
+***
+
+### Raking using given survey weights
+
+The CEP dataset includes its own weights (variable named `pond`). Unfortunately, there is no detailed information about the weighting construction in the methodological documentation of this survey ("Survey weighting is a mess", Gelman 2007). For illustrative purposes, however, I will show how to estimate raking weights using previous weights.
+
+Exploring the `pond` variable, we can see that there are some big weights (e.g., 17.6). This makes me think that they are just scaled design weights, probably with some non-response adjustment, but I am not really sure.
+
+```{r, warning=FALSE, message=FALSE}
+summary(dat$pond)
+```
+
+The weighting loss associated with the pond weights is relatively high, denoting a design effect of 2.09.
+
+```{r, warning=FALSE, message=FALSE}
+# weighting loss
+((sum(dat$pond ^ 2) / (sum(dat$pond)) ^ 2) * n) - 1
+```
+
+We can explore the total differences between the sample and population distributions using `pond` weights. Only **ses** and **region** meet the criterion of total differences greater than 5 percentage points. However, I will keep all the variables used in the previous section and specify that total differences between the population and sample should be greater than .05 (`pctlim = .05`).
+
+```{r, warning=FALSE, message=FALSE}
+anesrakefinder(targets, dat, weightvec = dat$pond, choosemethod = "total")
+```
+
+In order to get raking weights using previous weights, I only have to add `weightvec = dat$pond` to the `anesrake` command.
+
+```{r, warning=FALSE, results='hide', message=FALSE}
+outsave <- anesrake(targets, dat, caseid = dat$caseid,
+  weightvec = dat$pond,  verbose = FALSE, cap = 5,
+  choosemethod = "total", type = "pctlim",
+  pctlim = .05 , nlim = 5, iterate = TRUE, force1 = TRUE)
+```
+
+```{r, message=FALSE}
+summary(outsave)
+```
+
+Only  **ses** and **region** are used in the raking procedure. Some weights were truncated to 5, and the design effect decreased from 2.09 to 1.91. The differences between the sample and population distribution are not big.
+
+```{r}
+# add weights to the dataset
+dat$weightvec2  <- unlist(outsave[1])
+pond <- wpct(dat$approval, dat$pond)
+weighted_pond <-  wpct(dat$approval, dat$weightvec2)
+tab  <- data.frame(unweighted, pond, weighted, weighted_pond)
+rownames(tab)  <- c("approve", "disapprove", "unsure", "dk")
+tab
+```
+
+There are no great differences between the estimates `weighted` and `weighted_pond` (`r sum(abs(weighted - weighted_pond))`). There are greater discrepancies between `pond` and `weighted` estimates (0.049). This reveals the importance of the socioeconomic status in the presidential approval.
+
+***
+
+**Last Update: `r format(Sys.time(), '%m/%d/%Y')`**
+
+### References
+
+Battaglia, M., D. Izrael, D. C. Hoaglin, and M. Frankel. 2004. "Tips and Tricks for Raking Survey Data (Aka Sample Balancing)." American Association of Public Opinion Research.
+
+DeBell, Matthew and Jon A. Krosnick. 2009. "Computing Weights for American National Election Study Survey Data." Stanford University.
+
+Gelman, Andrew. 2007. "Struggles with Survey Weighting and Regression Modeling." Statistical Science 22(2):153-64.
+
+Heeringa, Steven, Brady T. West, and Patricia A. Berglund. 2010. Applied Survey Data Analysis. Boca Raton, FL: Chapman & Hall/CRC.
+
+Valliant, Richard, Jill A. Dever, and Frauke Kreuter. 2013. Practical Tools for Designing and Weighting Survey Samples. New York, NY: Springer New York.
+
+
