@@ -245,15 +245,14 @@ display_tags: ['machine learning', 'technology', 'thoughts'] # this tags will be
 # -----------------------------------------------------------------------------
 
 scholar:
-
-  last_name: 
-  first_name: 
+  last_name: [Einstein]
+  first_name: [Albert, A.]
 
   style: apa
   locale: en
 
   source: /_bibliography/
-  bibliography: 
+  bibliography: papers.bib
   bibliography_template: bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
