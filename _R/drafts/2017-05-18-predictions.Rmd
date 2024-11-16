@@ -1,13 +1,9 @@
 ---
 layout: post
-title: "Explanations vs Predictions"
+title: "draft for future"
 description: ""
 category: ""
 tags: []
 ---
 
 
-Two tradition or cultures that seems to be reconciling nowdays. Still I have several questions I would like to discuss briefly here.
-
-
-**Last Update: `r format(Sys.time(), '%m/%d/%Y')`**
