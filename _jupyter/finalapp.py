@@ -14,7 +14,7 @@ df = pd.read_csv('/Users/malhar.inamdar/Desktop/streamlitapp/diabetes_prediction
 columns = ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
 
 # Set up GenAi model and API key
-GOOGLE_API_KEY = "AIzaSyCr109nLhfwS7ozcKEsO20PldcmWHoxgYA"
+GOOGLE_API_KEY = ""
 genai.configure(api_key=GOOGLE_API_KEY)
 
 MODEL_CONFIG = {
