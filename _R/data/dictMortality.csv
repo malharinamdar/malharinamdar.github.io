@@ -1,7 +1,0 @@
-1,2,2,FIPS State code,Numeric
-3,5,3,FIPS county code,Numeric
-6,9,4,Year of death,Numeric
-11,12,2,Age at death,Numeric
-13,16,4,ICD code for underlying cause-of-death 3 digits:,Numeric
-17,19,3,Cause-of-Death Recode,Numeric
-20,23,4,Number of deaths,Numeric
