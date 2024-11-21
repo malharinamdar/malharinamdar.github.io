@@ -1,13 +1,13 @@
 ---
 layout: page
-title: resume
+title: cv
 permalink: /cv/
 description:
 nav: true
 ---
 
 
-- [Download Resume ](/assets/pdf/resume_malhar3.pdf)
+- [Download CV ](/assets/pdf/resume_malhar3.pdf)
 
 
 <br>
