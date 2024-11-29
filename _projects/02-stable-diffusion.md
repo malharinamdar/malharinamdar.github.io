@@ -13,12 +13,7 @@ CLIP Encoder and the Variational Autoencoder (VAE) for its functioning.
 
 The architecture was implemented based on the research paper present in the repo linked below.
 
-I am adding the notes I have taken while building and learning throughout the implementation of this project.
-
-[Notes](/assets/pdf/diffusionmodels.pdf)
-
-Sorry for the poor handwriting :)
-
-Hope to post a blog on the topic soon.
+I aim to soon add the notes I have taken while building and learning throughout the implementation of this project and also
+hope to post a blog on the topic soon.
 
 code available at <a href="https://github.com/malharinamdar/luxis">repo</a>
