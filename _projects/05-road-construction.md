@@ -20,11 +20,18 @@ code available at [repo](https://github.com/malharinamdar/road-contruction-monit
 The 8 different stages include:
 
 •	Category 1: Clearing and Grubbing
+
 •	Category 2: Excavation and Earthwork
+
 •	Category 3: Subgrade Preparation
+
 •	Category 4: Base Layer Construction
+
 •	Category 5: Macadamisation
+
 •	Category 6: Utility Installation
+
 •	Category 7: Road Marking
+
 •	Category 8: Pedestrian Infrastructure
 
