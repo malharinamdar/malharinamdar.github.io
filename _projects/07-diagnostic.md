@@ -11,3 +11,5 @@ category: current
 Project for PICT Techfiesta Hackathon.
 
 Using medical imaging and analysis to assist doctors in diagnosing diseases. 
+
+Utilising GradCAM to provide interpretability for the model's prediction using CNN model for medical imaging and analysis.
