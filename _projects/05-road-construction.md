@@ -8,9 +8,8 @@ category: current
 ---
 
 This project aims to classify the drone image capturing the different stage of road construction in 8 different categories
-Currently the model was tested on limited data just more than 200 images classifying the stage of road construction using ResNet model.
+The model classifies the stage of road construction using ResNet model.
 
-I am currently optimising the model to improve the accuracy of stage classification, currently a work in progress.
 
 This project was a part of SIH Smart India Hackathon where I looked after the team's ML part of the project.
 
