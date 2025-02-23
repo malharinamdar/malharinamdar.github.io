@@ -26,7 +26,14 @@ jobs:
         ruby-version: '3.0.2'
         bundler-cache: true
 
-    - name: Install deps
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle update --bundler
+        rm -rf vendor/bundle
+        bundle install
+        
+    - name: Install Mermaid CLI (for diagrams)
       run: |
         npm install -g mermaid.cli
 
@@ -43,7 +50,12 @@ jobs:
         fi
         echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
 
-    - name: Deploy website 
-      run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
-                    --src ${{ steps.setup.outputs.SRC_BRANCH }} 
+    - name: Build Jekyll site
+      run: |
+        JEKYLL_ENV=production bundle exec jekyll build
+
+    - name: Deploy website
+      run: |
+        yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }} \
+                    --src ${{ steps.setup.outputs.SRC_BRANCH }} \
                     --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }}
