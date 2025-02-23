@@ -26,13 +26,14 @@ jobs:
         ruby-version: '3.0.2'
         bundler-cache: true
 
-    - name: Install dependencies
+    - name: Fix Bundler and Dependencies
       run: |
-        gem install bundler
+        gem install bundler -v 2.4.22
         bundle update --bundler
         rm -rf vendor/bundle
         bundle install
-        
+        gem uninstall uri --all --ignore-dependencies || true  # Remove conflicting 'uri' gem
+
     - name: Install Mermaid CLI (for diagrams)
       run: |
         npm install -g mermaid.cli
@@ -52,6 +53,7 @@ jobs:
 
     - name: Build Jekyll site
       run: |
+        export RUBYOPT="--disable-gems"
         JEKYLL_ENV=production bundle exec jekyll build
 
     - name: Deploy website
