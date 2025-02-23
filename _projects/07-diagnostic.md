@@ -2,7 +2,7 @@
 layout: page
 title: Vaidya Nidaan
 description: MRI diagnosis for alzheimer's with biomarkers and explainability using ml and medical imaging
-img: assets/img/imaging.jpg
+img: assets/img/vaidya-nidaan.png
 # years: [2020, 2019, 2018]
 importance: 2
 category: current
