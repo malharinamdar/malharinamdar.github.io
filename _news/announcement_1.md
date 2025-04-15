@@ -1,7 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2025-04-14 12:35:00
 inline: true
 ---
 
-A simple inline announcement.
+Regional Tiny Stories: Using Small Models to Compare Language Learning
+and Tokenizer Performance, preprint available on arxiv : https://arxiv.org/abs/2504.07989.
