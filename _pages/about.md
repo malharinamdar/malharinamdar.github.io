@@ -16,8 +16,8 @@ news: true
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-I’m Malhar, an undergrad focusing on neural networks and deep learning, with a keen interest in their applications across different peripherals such as climate and health.
+I’m Malhar, an undergrad focusing on neural networks and deep learning, with a keen interest in their applications in health and climate.
 
-My interest in this field draws my attention to research, where I wish to build and design technology that helps catalyze progress towards an age of abundant intelligence, energy and creativity. 
+My interest in this field draws my attention to research, where I wish to build and design technology that that creates genuine value by solving impactful problems in healthcare and beyond. 
 
 Reach out if you’d like to chat about anything you think we’d both enjoy! Open to research internship positions.
