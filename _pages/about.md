@@ -6,7 +6,7 @@ description: machine learning, research, robotics and tech.
 
 profile:
   align: right
-  image: assets/img/malhar_prof_pic.jpeg
+  image: malhar_prof_pic.jpeg
   image_circular: false
   address: >
     <p>Mussoorie, Uttarakhand</p>
