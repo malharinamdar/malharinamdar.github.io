@@ -9,7 +9,7 @@ profile:
   image: malhar_prof_pic.jpeg
   image_circular: false
   address: >
-    <p>Mussoorie, Uttarakhand</p>
+    <p>⛰️ Among the hills of Mussoorie, Uttarakhand</p>
 
 news: true
 
