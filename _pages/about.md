@@ -8,20 +8,7 @@ profile:
   align: right
   image: malhar_prof_pic.jpeg
   image_circular: false
-  address: >
-    <p style="
-      font-style: italic;
-      font-size: 0.9rem;
-      margin-top: 8px;
-      line-height: 1.4;
-      color: #9e9e9e; /* Light gray for dark mode */
-      opacity: 0.9; /* Slightly transparent */
-      @media (prefers-color-scheme: light) {
-        color: #5a5a5a; /* Dark gray for light mode */
-      }
-    ">
-      ⛰️ Among the hills of Mussoorie, Uttarakhand
-    </p>
+  address: >   <p style="font-style: italic; font-size: 0.9rem; margin-top: 8px; line-height: 1.4; color: #9e9e9e;"> ⛰️ Among the hills of Mussoorie, Uttarakhand </p>
 
 news: true
 
