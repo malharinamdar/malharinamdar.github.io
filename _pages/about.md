@@ -9,7 +9,7 @@ profile:
   image: malhar_prof_pic.jpeg
   image_circular: false
   address: >
-    <p class="italic text-sm mt-2 leading-relaxed text-gray-600 dark:text-gray-400">
+    <p class="italic text-[0.9rem] mt-[8px] leading-[1.4] text-gray-600 dark:text-gray-400">
       ⛰️ Among the hills of Mussoorie, Uttarakhand
     </p>
 
