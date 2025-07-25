@@ -4,5 +4,5 @@ date: 2025-06-14 13:13:00
 inline: true
 ---
 <p>
-  I have been selected to attend this year's Microsoft Research (MSR) India's premier Academic Summit 2025
+  Was selected to attend Microsoft Research India's Academic Summit 2025 (virtually).
 </p>
