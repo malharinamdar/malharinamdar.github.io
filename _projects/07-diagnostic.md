@@ -5,7 +5,7 @@ description: MRI diagnosis for alzheimer's with biomarkers and explainability us
 img: assets/img/vaidya-nidaan.png
 # years: [2020, 2019, 2018]
 importance: 2
-category: current
+category: previous
 ---
 
 Project for PICT Techfiesta Hackathon.
