@@ -4,7 +4,7 @@ title: road construction monitoring
 description: construction stage detection using drone images 
 img: assets/img/road.jpg
 importance: 2
-category: current
+category: previous
 ---
 
 This project aims to classify the drone image capturing the different stage of road construction in 8 different categories
