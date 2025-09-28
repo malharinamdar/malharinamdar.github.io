@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: machine learning, research, robotics and tech.
+description: machine learning, research and tech.
 
 profile:
   align: right
