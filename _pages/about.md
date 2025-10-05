@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: undergraduate researcher working at the intersection of healthcare AI and multilingual language modeling.
+description: working at the intersection of healthcare AI and multilingual language modeling.
 profile:
   align: right
   image: malhar_prof_pic.jpeg
@@ -12,15 +12,17 @@ profile:
       ⛰️ Somewhere between code and the clouds — currently in Mussoorie, Uttarakhand
     </p>
 news: true
-selected_papers: true # Set this to true to show your publication
-social: true # Set this to true to show social icons
+selected_papers: false # Set this to true to show your publication
+social: false # Set this to true to show social icons
 ---
 
 Hey, I'm Malhar, a third-year undergrad at PICT, Pune, working on AI systems that can reason through complex problems and serve humanity in meaningful ways.
+
 My research interests center on healthcare AI, reasoning models, and multilingual language intelligence. I'm particularly drawn to building systems that improve accessibility in low-resource settings - whether that means developing diagnostic tools for underserved communities or creating language models, frameworks for mutlilingual settings.
 
 ### What I've Been Working On
 Some things I've worked on:
+
 Vaidya Nidaan — Led the development of an Alzheimer's diagnostic platform that integrates CNN-based analysis with medical imaging using FSL biomarker identification (hippocampal volume, white/gray matter ratios). The system employs GradCAM for visual interpretability and includes a multilingual RAG pipeline that generates structured medical reports grounded in research literature. This work secured third place among 400+ teams at PICT Techfiesta 2025.
 
 Medical Reasoning with Phi-3 — Fine-tuned Phi-3-mini-4k-instruct on the MedQA-USMLE dataset to teach structured clinical reasoning. Using QLoRA, I trained the model to generate explainable diagnostic chains-of-thought while engaging only 0.44% of its parameters. To explore preference-based alignment further, I implemented a GRPO trainer from scratch in PyTorch, working through the practical challenges of low-precision optimization.
