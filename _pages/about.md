@@ -29,10 +29,10 @@ My research interests center on impactful applications of AI such as across clim
 
 [**Regional TinyStories**](https://arxiv.org/abs/2504.07989) — At [Vizuara AI Labs](https://vizuara.ai), I conducted research on multilingual language modeling under Dr. Raj Dandekar, extending Microsoft's TinyStories (2023) work for Indian regional languages. I trained Small Language Models (2M–150M parameters) from scratch for Hindi, Marathi, and Bengali. We developed a novel framework for the development and analysis of SLMs, tokenizer performance, linguistic complexity, machine translation performance and demonstrated that a 53M parameter model could achieve GPT-3.5-comparable results on short-story generation - a promising direction for accessible, high-quality models in Indian languages. This work is currently under review at ACL ARR 2025.
 
-At [Froncort.AI](https://froncort.ai), Implemented a RLHF pipeline that converted expert reviewer feedback into heuristic reward signals, improving LLM output quality by 35% while working within tight compute constraints compliant with international regulatory and ontological standards. 
+At [Froncort.AI](https://froncort.ai), I implemented a RLHF pipeline that converted expert reviewer feedback into heuristic reward signals, improving LLM output quality by 35% while working within tight compute constraints compliant with international regulatory and ontological standards. 
 
 ### When I'm Not Training Models..
 
 I'm probably reading papers, books at odd hours or wandering through the hills. I'm drawn to the philosophical questions that emerge from AI's capabilities, but I'm most energized by the opportunity to build systems that genuinely help people. Music often accompanies this process — it’s become a quiet companion that helps me think through problems and find clarity.
 
-If you're working on something in healthcare AI, language modeling or just ml in general, feel free to reach out! I'd be glad to hear from you.
+If you're working on something in healthcare, climate AI or language modeling or just ml in general, feel free to reach out! I'd be glad to hear from you.
