@@ -20,7 +20,7 @@ Hey, I'm Malhar, a third-year undergrad at PICT, Pune, working on AI systems tha
 
 My research interests center on healthcare AI, reasoning models, and multilingual language intelligence. I'm particularly drawn to building systems that improve accessibility in low-resource settings - whether that means developing diagnostic tools for underserved communities or creating language models, frameworks for mutlilingual settings.
 
-### Some things I've worked on
+### What I've worked on
 
 
 **Vaidya Nidaan** — Led the development of an *Alzheimer's* diagnostic platform that integrates CNN-based analysis with medical imaging using FSL biomarker identification (hippocampal volume, white/gray matter ratios). The system employs *GradCAM* for visual interpretability and includes a multilingual RAG pipeline that generates structured medical reports grounded in research literature. This work secured third place among 400+ teams at PICT Techfiesta 2025.
