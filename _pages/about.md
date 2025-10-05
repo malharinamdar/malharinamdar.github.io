@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: about
 title: about
-permalink: /about/
+permalink: /
 description: research, machine learning and artificial intelligence
 profile:
   align: right
