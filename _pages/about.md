@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: working at the intersection of healthcare AI and multilingual language modeling.
+description: description: research, machine learning and artificial intelligence
 profile:
   align: right
   image: malhar_prof_pic.jpeg
@@ -35,4 +35,4 @@ At [Froncort.AI](https://froncort.ai), Implemented a RLHF pipeline that converte
 
 I'm probably reading papers, books at odd hours or wandering through the hills. I'm drawn to the philosophical questions that emerge from AI's capabilities, but I'm most energized by the opportunity to build systems that genuinely help people. Music often accompanies this process — it’s become a quiet companion that helps me think through problems and find clarity.
 
-If you're working on something in healthcare AI or language modeling for low-resource settings or just technology in general, feel free to reach out! I'd be glad to hear from you.
+If you're working on something in healthcare AI, language modeling or just ml in general, feel free to reach out! I'd be glad to hear from you.
