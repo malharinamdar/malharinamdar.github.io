@@ -9,8 +9,7 @@ profile:
   image_circular: false
   address: >
     <p style="font-style: italic; font-size: 0.9rem; margin-top: 8px; line-height: 1.4; color: #6c757d !important;" class="dark:text-gray-400">
-      ⛰️ Somewhere between code and the clouds..
-      Among the hills of Mussoorie, Uttarakhand
+      ⛰️ Among the hills of Mussoorie, Uttarakhand
     </p>
 news: true
 selected_papers: false # Set this to true to show your publication
