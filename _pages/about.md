@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: 
-description: description: research, machine learning and artificial intelligence
+description: research, machine learning and artificial intelligence
 profile:
   align: right
   image: malhar_prof_pic.jpeg
