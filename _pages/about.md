@@ -33,6 +33,6 @@ At [Froncort.AI](https://froncort.ai), Implemented a RLHF pipeline that converte
 
 ### When I'm Not Training Models..
 
-I'm probably reading papers, books at odd hours or wandering through the hills. I'm drawn to the philosophical questions that emerge from AI's capabilities, but I'm most energized by the opportunity to build systems that genuinely help people. Music often accompanies this process — it’s become a quiet companion that helps me think through problems and find clarity..
+I'm probably reading papers, books at odd hours or wandering through the hills. I'm drawn to the philosophical questions that emerge from AI's capabilities, but I'm most energized by the opportunity to build systems that genuinely help people. Music often accompanies this process — it’s become a quiet companion that helps me think through problems and find clarity.
 
 If you're working on something in healthcare AI or language modeling for low-resource settings or just technology in general, feel free to reach out! I'd be glad to hear from you.
