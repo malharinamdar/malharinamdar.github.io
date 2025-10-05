@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: page
 title: about
 permalink: /about/
 description: research, machine learning and artificial intelligence
@@ -12,8 +12,8 @@ profile:
       ⛰️ Among the hills of Mussoorie, Uttarakhand
     </p>
 news: true
-selected_papers: false # Set this to true to show your publication
-social: false # Set this to true to show social icons
+selected_papers: false 
+social: false 
 ---
 
 Hey, I'm Malhar, a third-year undergrad at PICT, Pune, working on AI systems that can reason through complex problems and serve humanity in meaningful ways.
