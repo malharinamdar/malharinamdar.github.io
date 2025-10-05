@@ -4,8 +4,5 @@ date: 2025-7-24
 inline: true
 ---
 <p>
-  Selected for Data Science: Probabilistic and Optimization Methods II, [ICTS-TIFR](https://www.icts.res.in/program/DSPOM) 2025, a selective advanced program of 
-  International Centre for Theoretical Sciences (ICTS) - Tata Institute of Fundamental Research, featuring lectures by 
-  leading experts from world-renowned research institutions and industry leaders on data science, probabilistic models 
-  and optimization techniques.
+  - **Selected** for the highly competitive **Data Science: Probabilistic and Optimization Methods II** program at [ICTS-TIFR](https://www.icts.res.in/program/DSPOM) (2025). This program of the International Centre for Theoretical Sciences - Tata Institute of Fundamental Research features lectures by leading experts on data science, probabilistic models, and optimization techniques.
 </p>
