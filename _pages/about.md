@@ -16,9 +16,8 @@ selected_papers: false
 social: false 
 ---
 
-Hey, I'm Malhar, a third-year undergrad at PICT, Pune, working on AI systems that can help solve complex problems and benefit humanity in meaningful ways.
-
-My research interests center on impactful applications of AI such as across climate, healthcare, reasoning models, and multilingual language modelling. I'm particularly drawn to building systems that improve accessibility in low-resource settings and interpretability that improves model trust and reliability - whether that means developing diagnostic tools for underserved communities or creating language models, frameworks for mutlilingual settings.
+Hey, I'm Malhar, a third-year undergrad at PICT, Pune, working on AI systems that can help solve complex problems and benefit humanity.
+My research interests center on impactful applications of AI such as across climate, healthcare, language modelling and reasoning capabilities. I'm particularly drawn to building systems that improve accessibility in low-resource settings and interpretability that improves model trust and reliability - whether that means developing diagnostic tools for underserved communities or creating language models, frameworks for mutlilingual settings.
 
 ### What I've worked on
 
