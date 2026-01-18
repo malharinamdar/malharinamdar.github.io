@@ -5,6 +5,6 @@ inline: true
 ---
 <p>
   <em>Regional Tiny Stories: Using Small Models to Compare Language Learning and Tokenizer Performance</em> — preprint available on 
-  <a href="https://arxiv.org/abs/2504.07989" target="_blank">arXiv</a>.
+  <a href="https://arxiv.org/abs/2504.07989v2" target="_blank">arXiv</a>.
 </p>
 
