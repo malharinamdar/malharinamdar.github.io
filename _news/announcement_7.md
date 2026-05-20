@@ -5,5 +5,5 @@ inline: true
 ---
 
 <p>
-  Began my Summer Internship at Mastercard, Pune Tech Hub, will be working on some cool stuff related to AI Agents and automation!
+  Joined <strong>Mastercard</strong> as a Summer Intern at the Pune Tech Hub. I'll be contributing to projects involving AI agents, automation, and developer tooling over the next couple of months.
 </p>
