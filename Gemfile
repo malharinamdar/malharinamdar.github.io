@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 group :jekyll_plugins do
-    gem 'jekyll'
+    gem 'jekyll', '~> 4.3.4'
+    gem 'jekyll-sass-converter', '~> 2.2'
     gem 'jekyll-archives'
     gem 'jekyll-diagrams'
     gem 'jekyll-email-protect'
@@ -21,3 +22,5 @@ group :other_plugins do
     gem 'httparty'
     gem 'feedjira'
 end
+
+gem 'ostruct'
