@@ -2,23 +2,22 @@
 ---
 
 <div class="row">
-  <div class="col-sm-2 abbr">
+  <div class="col-sm-3">
+  {% if entry.preview %}
+    <img class="preview z-depth-1 rounded" src="{{ entry.preview | prepend: 'assets/img/' | relative_url }}" alt="{{ entry.title }}" data-zoomable>
+  {% endif %}
   {% if entry.abbr %}
+    <div class="abbr" style="margin-top: 0.5rem;">
     {% if site.data.venues[entry.abbr] %}
     <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
     {% else %}
     <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
+    </div>
   {% endif %}
   </div>
 
-  {% if entry.preview %}
-  <div class="col-sm-4 preview">
-    <img class="preview z-depth-1 rounded" src="{{ entry.preview | prepend: 'assets/img/' | relative_url }}" alt="{{ entry.title }}" data-zoomable>
-  </div>
-  {% endif %}
-
-  <div id="{{entry.key}}" class="col-sm-6">
+  <div id="{{entry.key}}" class="col-sm-9">
     {% if entry.type == "thesis" %}
       {{reference}}
     {% else %}
