@@ -7,7 +7,7 @@ importance: 1
 category: current
 ---
 
-After we finished the [Regional-TinyStories](https://aclanthology.org/2025.findings-ijcnlp.142/) work, I kept coming back to one question that the paper didn't really answer: *what are these models actually doing on the inside?* We had trained small language models for Hindi, Marathi and Bangla and measured how well they generated text, but the models themselves were still black boxes to me. Circuit-Lens started as my attempt to open them up.
+After we finished the [Regional-TinyStories](https://aclanthology.org/2025.findings-ijcnlp.142/) work, I wanted to go a level deeper and actually dive into the internals of the SLM checkpoints we had trained. We had built small language models for Hindi, Marathi and Bangla and measured how well they generated text, and I was really curious to explore what was happening *inside* them — how they were representing language across their layers. Circuit-Lens started as my attempt to open them up and find out.
 
 It is a hook-based mechanistic interpretability framework built around the SLMs from the paper. The idea is simple: instead of only looking at what comes out of the model, I attach forward hooks that record what happens at every layer as a sentence passes through, and then run a set of analyses on top of those recordings.
 
