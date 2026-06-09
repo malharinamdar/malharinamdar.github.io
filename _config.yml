@@ -245,8 +245,8 @@ display_tags: ['machine learning', 'technology', 'thoughts'] # this tags will be
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Inamdar]
+  first_name: [Malhar Abhay, Malhar, M. A.]
 
   style: apa
   locale: en

@@ -12,6 +12,12 @@
   {% endif %}
   </div>
 
+  {% if entry.preview %}
+  <div class="col-sm-2 preview">
+    <img class="preview z-depth-1 rounded" src="{{ entry.preview | prepend: 'assets/img/' | relative_url }}" alt="{{ entry.title }}" data-zoomable>
+  </div>
+  {% endif %}
+
   <div id="{{entry.key}}" class="col-sm-8">
     {% if entry.type == "thesis" %}
       {{reference}}

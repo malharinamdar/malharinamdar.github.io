@@ -12,7 +12,7 @@ profile:
       ⛰️ Among the hills of Mussoorie, Uttarakhand
     </p>
 news: true
-selected_papers: false 
+selected_papers: true 
 social: false 
 ---
 
