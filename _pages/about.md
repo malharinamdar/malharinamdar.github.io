@@ -16,20 +16,14 @@ selected_papers: true
 social: false 
 ---
 
-Hey, I'm Malhar, a third-year undergrad at PICT, Pune, with a profound interest in machine learning research and developing systems that can help solve complex problems and have large scale impact.
+Hey, I'm Malhar, a third-year undergrad at PICT, Pune, with a profound interest in machine learning research and building systems that can solve complex problems at scale.
 
-My research interests center on impactful applications of machine learning such as across climate, healthcare, language modelling and multilingual nlp. I'm particularly drawn to building systems that improve accessibility in low-resource settings and interpretability that improves model trust and reliability.
-### What I've worked on
+My research interests center on impactful applications of machine learning across climate, healthcare, language modelling and multilingual NLP. I'm particularly drawn to building systems that improve accessibility in low-resource settings, and to interpretability that makes models more trustworthy and reliable.
 
+Over the past year, I've worked as a research intern at [Vizuara AI Labs](https://vizuara.ai) under Dr. Raj Dandekar on Regional-TinyStories, where we extended Microsoft's TinyStories to Indian regional languages. I trained Small Language Models from scratch (5M–150M parameters) for Hindi, Marathi and Bangla, and helped build a framework to study tokenizer performance, linguistic complexity and machine translation quality across them — work that was accepted at [AACL Findings 2025 (IJCNLP)](https://aclanthology.org/2025.findings-ijcnlp.142/). Earlier at Vizuara, I also worked with Mahindra Motors on a diffusion-based inpainting pipeline for automotive image editing.
 
-**Vaidya Nidaan** — Led the development of an *Alzheimer's* diagnostic platform that integrates CNN-based analysis with medical imaging using FSL biomarker identification (hippocampal volume, white/gray matter ratios). The system employs *GradCAM* for visual interpretability and includes a multilingual RAG pipeline that generates structured medical reports grounded in research literature. This work secured third place among 400+ teams at PICT Techfiesta 2025.
+At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline that converted expert reviewer feedback into heuristic reward signals to improve LLM output quality under tight compute and regulatory constraints, and architected a multi-agent system for regulatory document generation.
 
-**Regional TinyStories** — At [Vizuara AI Labs](https://vizuara.ai), I conducted research on multilingual language modeling under Dr. Raj Dandekar, extending Microsoft's TinyStories (2023) work for Indian regional languages. I trained Small Language Models (2M–150M parameters) from scratch for Hindi, Marathi, and Bengali. We developed a novel framework for the development and analysis of SLMs, tokenizer performance, linguistic complexity, machine translation performance and demonstrated that a 54M parameter model could achieve GPT-3.5-comparable results on short-story generation - a promising direction for accessible, high-quality models in Indian languages. Work accepted at ***AACL Findings 2025 (IJCNLP)*** [Paper Link](https://aclanthology.org/2025.findings-ijcnlp.142/).
+Outside of research, I like building things end-to-end. One project I'm especially proud of is an Alzheimer's diagnostic platform that combines CNN-based medical imaging, FSL biomarker analysis and Grad-CAM interpretability with a multilingual RAG pipeline for report generation — it won third place among 400+ teams at the PICT Techfiesta hackathon.
 
-At [Froncort.AI](https://froncort.ai), I implemented a RLHF pipeline that converted expert reviewer feedback into heuristic reward signals, improving LLM output quality by 35% while working within tight compute constraints compliant with international regulatory and ontological standards; and architected multi-agentic system for regulatory document generation workflows.  
-
-### When I'm Not Training Models..
-
-I'm probably reading books, scrolling through interesting ml papers, listening music at odd hours or wandering through the hills. I'm drawn to the philosophical questions that emerge from AI's capabilities, but I'm most energized by the opportunity to build systems that genuinely help people. Music often accompanies this process — it’s become a quiet companion that helps me think through problems and find clarity.
-
-If you're working on something in healthcare, climate AI or language modeling or just ml in general, feel free to reach out! I'd be glad to hear from you.
+If you're working on something in healthcare, climate AI, language modeling, or just ML in general, feel free to reach out — I'd be glad to hear from you.
