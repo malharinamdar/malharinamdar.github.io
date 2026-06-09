@@ -24,6 +24,6 @@ Over the past year, I've worked as a research intern at [Vizuara AI Labs](https:
 
 At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline that converted expert reviewer feedback into heuristic reward signals to improve LLM output quality under compute constraints, and architected a multi-agent system for regulatory document generation for medical devices.
 
-I also enjoy building projects that are meaningful and carry real-world impact. For the PICT Techfiesta hackathon 2025, I led the development of Vaidya Nidaan, an Alzheimer's diagnostic platform combining CNN-based MRI classification, FSL biomarker analysis, Grad-CAM interpretability, and a multilingual RAG pipeline for medical report generation. The project was placed third among 400+ teams.
+I enjoy building projects that are meaningful and carry real-world impact. For the PICT Techfiesta hackathon 2025, I led the development of Vaidya Nidaan, an Alzheimer's diagnostic platform combining CNN-based MRI classification, FSL biomarker analysis, Grad-CAM interpretability, and a multilingual RAG pipeline for medical report generation. The project was placed third among 400+ teams.
 
 Feel free to reach out if you're working in AI/ML or just want to discuss anything — I'd be glad to hear from you.
