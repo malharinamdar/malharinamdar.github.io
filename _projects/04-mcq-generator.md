@@ -1,24 +1,19 @@
 ---
 layout: page
 title: mcq generator
-description: text based mcq generator using NLP
+description: turning documents into multiple-choice questions
 img: assets/img/mcq.png
 # years: [2020, 2019, 2018]
 importance: 2
 category: previous
 ---
 
-In this project my initial idea was to implement the the system of mcq generation using T5 Tranformer model 
-alongwith BERT encoder transformer based model to synthesise text and generate suitable questions using NLP techniques and we
-use the open source BERT model to analyse the text input, but due to the complexities involved and certain constraints I halted the idea.
+This is a web app that takes a document and automatically generates multiple-choice questions from it. You upload a `.txt` or `.pdf`, pick how many questions you want and at what difficulty (easy, medium or hard), and it produces a quiz from the content.
 
-I plan to implement this idea using NLP techniques soon and update the webapp.
+My original plan was actually more ambitious on the NLP side — I wanted to build the question generation myself using a **T5** encoder-decoder model together with a **BERT** encoder to analyse the text and synthesise questions. I started down that path, but between the complexity involved and a few other constraints, I paused that approach for the time being.
 
-Rather I chose a simpler approach of directly using Gemini LLM model to implement the project. I also plan to add additional features and 
-ideas into this project, which at this stage is still a very simple webapp.
-
+For the working version, I took a more direct route and used the **Gemini-1.5-Flash** model to do the generation, wrapped in a simple **Streamlit** app. It's intentionally lightweight at this stage. I still plan to come back and build out the original transformer-based pipeline, and to add more features to the webapp.
 
 website now live at <a href="https://mcq-generator-web.streamlit.app/">link</a>
 
 Code available at <a href="https://github.com/malharinamdar/mcq-generator">repo</a>
-
