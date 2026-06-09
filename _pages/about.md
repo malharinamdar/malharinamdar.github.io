@@ -16,14 +16,14 @@ selected_papers: true
 social: false 
 ---
 
-Hey, I'm Malhar, a third-year undergrad at PICT, Pune, with a profound interest in machine learning research and building systems that can solve complex problems at scale.
+Hey, I'm Malhar, a final year undergraduate at PICT, Pune, with a keen interest in machine learning research.
 
-My research interests center on impactful applications of machine learning across climate, healthcare, language modelling and multilingual NLP. I'm particularly drawn to building systems that improve accessibility in low-resource settings, and to interpretability that makes models more trustworthy and reliable.
+My interests include multilingual NLP, language modelling, interpretability and applications of machine learning in healthcare and climate.
 
-Over the past year, I've worked as a research intern at [Vizuara AI Labs](https://vizuara.ai) under Dr. Raj Dandekar on Regional-TinyStories, where we extended Microsoft's TinyStories to Indian regional languages. I trained Small Language Models from scratch (5M–150M parameters) for Hindi, Marathi and Bangla, and helped build a framework to study tokenizer performance, linguistic complexity and machine translation quality across them — work that was accepted at [AACL Findings 2025 (IJCNLP)](https://aclanthology.org/2025.findings-ijcnlp.142/). Earlier at Vizuara, I also worked with Mahindra Motors on a diffusion-based inpainting pipeline for automotive image editing.
+Over the past year, I've worked as a research intern at [Vizuara AI Labs](https://vizuara.ai) under Dr. Raj Dandekar on Regional-TinyStories, where we extended Microsoft's TinyStories to Indian regional languages. I trained Small Language Models from scratch (5M–150M parameters) for Hindi, Marathi and Bangla, and developed a framework to study tokenizer performance, linguistic complexity and machine translation quality across them — work accepted at [IJCNLP-AACL Findings 2025](https://aclanthology.org/2025.findings-ijcnlp.142/). Earlier at Vizuara, I also worked with [Mahindra Motors](https://auto.mahindra.com/) on a diffusion-based inpainting pipeline for automotive image editing.
 
-At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline that converted expert reviewer feedback into heuristic reward signals to improve LLM output quality under tight compute and regulatory constraints, and architected a multi-agent system for regulatory document generation.
+At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline that converted expert reviewer feedback into heuristic reward signals to improve LLM output quality under compute constraints, and architected a multi-agent system for regulatory document generation for medical devices.
 
-Outside of research, I like building things end-to-end. One project I'm especially proud of is an Alzheimer's diagnostic platform that combines CNN-based medical imaging, FSL biomarker analysis and Grad-CAM interpretability with a multilingual RAG pipeline for report generation — it won third place among 400+ teams at the PICT Techfiesta hackathon.
+I also enjoy building projects that are meaningful and carry real-world impact. For the PICT Techfiesta hackathon 2025, I led the development of Vaidya Nidaan, an Alzheimer's diagnostic platform combining CNN-based medical imaging, FSL biomarker analysis and Grad-CAM interpretability with a multilingual RAG pipeline for report generation. The project stood third out of 400+ teams.
 
-If you're working on something in healthcare, climate AI, language modeling, or just ML in general, feel free to reach out — I'd be glad to hear from you.
+Feel free to reach out if you're working in AI/ML or just want to discuss anything — I'd be glad to hear from you.
