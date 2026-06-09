@@ -75,6 +75,9 @@
           {%- assign more_authors_show = more_authors_show | append: ", " -%}
         {%- endunless -%}
       {%- endfor -%}
+      {%- if entry.annotation -%}
+        {%- assign more_authors_show = more_authors_show | append: "  (" | append: entry.annotation | append: ")" -%}
+      {%- endif -%}
       , and
       <span
           class="more-authors"
