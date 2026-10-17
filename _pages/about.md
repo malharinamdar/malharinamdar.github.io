@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-description: मल्हार इनामदार
+description: मल्हार इनामदार · malhār ināmdār
+name_native: मल्हार इनामदार
+name_iast: malhār ināmdār
 profile:
   align: right
   image: malhar_prof_pic.jpeg

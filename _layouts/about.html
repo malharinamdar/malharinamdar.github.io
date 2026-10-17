@@ -8,7 +8,11 @@ layout: default
           <h1 class="post-title">
            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
           </h1>
+          {% if page.name_native -%}
+          <p class="desc">{{ page.name_native }} · <i>{{ page.name_iast }}</i></p>
+          {%- else -%}
           <p class="desc"><i>{{ page.description }}</i></p>
+          {%- endif %}
         </header>
 
         <br>
