@@ -20,12 +20,10 @@ Hey, I'm Malhar, a final year undergraduate at PICT, Pune, with a keen interest 
 
 My interests include multilingual NLP, language modelling, interpretability and applications of machine learning in healthcare and climate.
 
-At [Mastercard](https://www.mastercard.com), I built internal AI agents for automated Jira defect resolution and production anomaly detection, plus a [Power Apps / Power Automate](https://www.microsoft.com/power-platform) portal that cut TPM capacity planning from ~3 hours to under 3 minutes — and placed 2nd (Runner-up) in the Global Intern Innovation Challenge 2026.
+Over the past year, I've worked as a research intern at [Vizuara AI Labs](https://vizuara.ai) on the project Regional-TinyStories, where we extended Microsoft's [TinyStories (2023)](https://arxiv.org/abs/2305.07759) approach, which was originally for English, to Indian regional languages. We trained Small Language Models from scratch (5M–150M parameters) for Hindi, Marathi and Bangla, and developed a research framework for multilingual SLM evaluation, tokenizer analysis, translation data quality, and language complexity. Work accepted at [IJCNLP-AACL Findings 2025](https://aclanthology.org/2025.findings-ijcnlp.142/). Earlier at Vizuara, I also worked with [Mahindra Motors](https://auto.mahindra.com/) on a diffusion-based inpainting pipeline for automotive image editing.
 
-At [Vizuara AI Labs](https://vizuara.ai), I led Regional-TinyStories, extending Microsoft's [TinyStories](https://arxiv.org/abs/2305.07759) approach to Indian languages — training Small Language Models (5M–150M) from scratch for Hindi, Marathi and Bangla, accepted at [IJCNLP-AACL Findings 2025](https://aclanthology.org/2025.findings-ijcnlp.142/); earlier building a diffusion-based inpainting pipeline with [Mahindra Motors](https://auto.mahindra.com/).
+At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline that converted expert reviewer feedback into heuristic reward signals to improve LLM output quality under compute constraints, and architected a multi-agent system for regulatory document generation for medical devices.
 
-At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline turning expert feedback into heuristic reward signals, and a multi-agent system for regulatory document generation for medical devices.
-
-Outside of work, I led [Vaidya Nidaan](https://github.com/malharinamdar/vaidya-nidaan.git), an Alzheimer's diagnostic platform (CNN MRI classification, Grad-CAM interpretability, multilingual RAG report generation) — placed 3rd among 400+ teams at PICT Techfiesta 2025.
+I enjoy building projects that are meaningful and carry real-world impact. For the PICT Techfiesta hackathon 2025, I led the development of Vaidya Nidaan, an Alzheimer's diagnostic platform combining CNN-based MRI classification, FSL biomarker analysis, Grad-CAM interpretability, and a multilingual RAG pipeline for medical report generation. The project was placed third among 400+ teams.
 
 Feel free to reach out if you're working in AI/ML or just want to discuss anything — I'd be glad to hear from you.
