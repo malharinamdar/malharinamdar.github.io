@@ -22,9 +22,11 @@ Hey, I'm Malhar, a final year undergraduate at PICT, Pune, with a keen interest 
 
 My interests include multilingual NLP, language modelling, interpretability and applications of machine learning in healthcare and climate.
 
+At [Mastercard](https://www.mastercard.com), I worked on agent and context engineering for two internal tool agents — a production anomaly monitoring agent and StreamBuilder for defect and bug fixes — and built an automation for technical project managers that cut capacity planning from 3 hours to 3 minutes.
+
 Over the past year, I've worked as a research intern at [Vizuara AI Labs](https://vizuara.ai) on the project Regional-TinyStories, where we extended Microsoft's [TinyStories (2023)](https://arxiv.org/abs/2305.07759) approach, which was originally for English, to Indian regional languages. We trained Small Language Models from scratch (5M–150M parameters) for Hindi, Marathi and Bangla, and developed a research framework for multilingual SLM evaluation, tokenizer analysis, translation data quality, and language complexity. Work accepted at [IJCNLP-AACL Findings 2025](https://aclanthology.org/2025.findings-ijcnlp.142/). Earlier at Vizuara, I also worked with [Mahindra Motors](https://auto.mahindra.com/) on a diffusion-based inpainting pipeline for automotive image editing.
 
-At [Froncort.AI](https://froncort.ai), I built an RLHF pipeline that converted expert reviewer feedback into heuristic reward signals to improve LLM output quality under compute constraints, and architected a multi-agent system for regulatory document generation for medical devices.
+At [Froncort.AI](https://froncort.ai), I built a reviewer-feedback loop for LLM output refinement — an RLHF-style pipeline that converted expert reviewer feedback into heuristic reward signals, chosen after evaluating DPO and PPO approaches under compute constraints — and architected a multi-agent system for regulatory document generation for medical devices.
 
 I enjoy building projects that are meaningful and carry real-world impact. For the PICT Techfiesta hackathon 2025, I led the development of Vaidya Nidaan, an Alzheimer's diagnostic platform combining CNN-based MRI classification, FSL biomarker analysis, Grad-CAM interpretability, and a multilingual RAG pipeline for medical report generation. The project was placed third among 400+ teams.
 

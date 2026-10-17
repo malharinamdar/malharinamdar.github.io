@@ -12,7 +12,7 @@ Vaidya Nidaan is an end-to-end Alzheimer's diagnostic platform I built for the P
 
 It pulls together a few different pieces:
 
-- **MRI classification** — a VGG-19 convolutional network classifies the MRI scan, reaching around 95% accuracy on Alzheimer's detection.
+- **MRI classification** — a VGG-19 convolutional network classifies the MRI scan, reaching an AUC of 0.89 on Alzheimer's detection.
 - **Explainability with Grad-CAM++** — instead of just giving a prediction, the system generates heatmaps that highlight which regions of the brain the model was actually focusing on. Watching it consistently light up clinically relevant areas like the hippocampus is what first got me genuinely interested in interpretability.
 - **Biomarker extraction with FSL** — using the FMRIB Software Library, the pipeline automatically computes quantitative measurements from the scan, such as hippocampal volume and ventricular size, which are the kinds of biomarkers a clinician actually looks at.
 - **Multilingual chatbot** — a GPT-4-turbo powered assistant with retrieval, able to answer questions in English, Hindi, Marathi and other regional Indian languages.
