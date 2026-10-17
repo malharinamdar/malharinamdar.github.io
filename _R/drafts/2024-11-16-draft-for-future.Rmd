@@ -1,9 +1,0 @@
----
-layout: post
-title: "draft for future"
-description: ""
-category: ""
-tags: []
----
-
-
